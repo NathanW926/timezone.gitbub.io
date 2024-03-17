@@ -1,0 +1,48 @@
+header{
+    background-color: aquamarine;
+}
+ul {
+    list-style-type:none;
+    background-color:#333;
+    overflow:hidden;
+}
+li{
+    float:left;
+}
+li a {
+    display:block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size:18px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: grey;
+}
+h1{
+    text-align: center;
+}
+#World-info{
+    margin-left: 50px;
+    margin-right:50px;
+}
+#World-info p {
+    text-align: left;
+    font-size: 20px;
+}
+#US-info p {
+    text-align: left;
+}
+#US-info{
+    margin-right: 5px;
+    float:right;
+}
+
+footer p{
+    color:grey;
+    font-size:14px;
+    margin-top: 100px;
+}
+
+
