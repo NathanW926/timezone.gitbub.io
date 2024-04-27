@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">  
+ <link rel="stylesheet" href="Style.css">
+<head>
+        <meta charset="UTF-8">
+        <title>U.S.A Page</title>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HG2KFHT0NC"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HG2KFHT0NC');
+
+        </script>
+    </head>
+    
+
+    <body>
+        <header>
+            <h1>Time Zone Project</h1>
+            <nav>
+            <ul class="naviagtion">
+                <li><a href="index.html">Home</a></li>
+               <li><a href="U.S.A.html">U.S.A</a></li>
+                <li><a href="Form.html">Form</a></li>
+            </ul>
+            </nav>
+        </header>  
+
+<main>
+    <div class="two-cols">
+        <div class="photo">
+            <img src="https://www.time.gov/img/map-elements/united-states-map.png" alt="U.S image" width="700" height="500">
+            <p>Image is sourced from <a href="https://www.time.gov/">U.S.A Map</a></p>
+        </div>
+        
+        <div class="US-info">
+            <h2>U.S Facts</h2>
+            <p>
+                The United States of America first starting using the sun as a clock with noon meaning the sun was at its highest point in the sky. 
+                A need for time zones in the U.S rose when the railroad was on the rise. Train schedules became confusing when using the sun at the highest point in the sky in different locations. 
+                The History Channel states "On November 18, 1883, America's railroads began using a standard time system involving four time zones, Eastern, Central, Mountain, and Pacific." All clocks in one time zone were then synchronized to the same time. The time zone system became official in 1918 Standard Time Act, this act also included
+                daylight saving time. Now the world uses UTC and the time zones are divided into intervals of 15 degrees of longitude. 
+            </p>
+            <p>
+                <i>Information is from <a href="https://www.history.com/news/when-did-the-united-states-start-using-time-zones">History.com</a></i>
+            </p>
+
+        </div>
+        <div class="dif-zones">
+            <h2>U.S Zones</h2>
+            <p>There are six different time zones in the United States because of how large the country is. The continental United States is broken into 4 zones: Eastern/Red, Central/Yellow, Mountain/Green, and Pacific/Orange.</p>
+            <p>An example to show the different time zones:</p>
+            <ul>
+                <li>Current East Coast Time: <span id="east-coast"></span></li>
+                <li>Current Central Time Time: <span id="central-time"></span></li>
+                <li>Current Mountain Time Zone: <span id="mountain-time"></span></li>
+                <li>Current Pacific Time Zone: <span id="pacific-time"></span></li>
+            </ul>
+        </div>
+    </div>
+</main>
+    </body>
+</html>
+<script>
+    var getEastCoasttime = function() {
+        document.getElementById("east-coast").innerHTML = new Date().toLocaleTimeString("en-US",{timeZone:'America/New_york',timeStyle:'medium',hourCycle:'h24'})
+    }
+    getEastCoasttime();
+    setInterval(getEastCoasttime,1000);
+
+    var getCentralTime = function() {
+        document.getElementById("central-time").innerHTML = new Date().toLocaleTimeString("en-US",{timeZone:'America/Chicago',timeStyle:'medium',hourCycle:'h24'})
+    }
+    getCentralTime();
+    setInterval(getCentralTime,1000);
+
+    var getMountainTime = function() {
+        document.getElementById("mountain-time").innerHTML = new Date().toLocaleTimeString("en-US",{timeZone:'America/Denver',timeStyle:'medium',hourCycle:'h24'})
+    }
+    getMountainTime();
+    setInterval(getMountainTime,1000);
+
+    var getPacificTime = function() {
+        document.getElementById("pacific-time").innerHTML = new Date().toLocaleTimeString("en-US",{timeZone:'America/Los_Angeles',timeStyle:'medium',hourCycle:'h24'})
+    }
+    getPacificTime();
+    setInterval(getPacificTime,1000);
+</script>
